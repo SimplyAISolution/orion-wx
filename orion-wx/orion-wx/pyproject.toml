@@ -1,0 +1,38 @@
+[project]
+name = "orion-wx"
+version = "0.1.0"
+description = "Open U.S. weather AI platform with NWP+ML+nowcasting, optional heliophysics features, API & map UI"
+authors = [{ name = "Orion WX Contributors"}]
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "fastapi>=0.111.0",
+  "uvicorn[standard]>=0.30.0",
+  "pydantic-settings>=2.3.0",
+  "xarray>=2024.3.0",
+  "dask[array]>=2024.3.0",
+  "cfgrib>=0.9.14.0",
+  "eccodes>=1.7.0",
+  "satpy>=0.46.0",
+  "metpy>=1.6.0",
+  "pysteps>=1.9.0",
+  "numpy>=1.26",
+  "pandas>=2.2",
+  "scikit-learn>=1.5",
+  "httpx>=0.27",
+  "pydantic>=2.7",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.0",
+  "pytest-cov>=5.0",
+  "ruff>=0.5.0",
+  "mypy>=1.10",
+  "types-requests",
+  "jupyter",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
